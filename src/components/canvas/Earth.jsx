@@ -1,44 +1,69 @@
-import React, { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Preload, Sphere } from '@react-three/drei';
+import React, { Suspense, useRef } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { OrbitControls, Preload, Sphere, MeshDistortMaterial } from '@react-three/drei';
+import * as THREE from 'three';
 import CanvasLoader from '../Loader';
 
 const Earth = () => {
+  const meshRef = useRef();
+
+  // Rotate the earth slowly
+  useFrame((state, delta) => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y += delta * 0.2;
+    }
+  });
+
   return (
     <group>
-      {/* Main Earth Sphere */}
-      <Sphere args={[2.5, 64, 64]} scale={1}>
-        <meshStandardMaterial
+      {/* Main Earth Sphere with noise/distortion */}
+      <Sphere ref={meshRef} args={[2.5, 64, 64]}>
+        <MeshDistortMaterial
           color="#5A935E"
-          metalness={0.4}
-          roughness={0.6}
-          emissive="#5A935E"
-          emissiveIntensity={0.2}
+          attach="material"
+          distort={0.3}
+          speed={2}
+          roughness={0.4}
+          metalness={0.8}
         />
       </Sphere>
 
-      {/* Atmosphere Glow */}
-      <Sphere args={[2.6, 64, 64]} scale={1}>
+      {/* Outer atmosphere glow */}
+      <Sphere args={[2.65, 32, 32]}>
         <meshBasicMaterial
           color="#D9DBBC"
+          transparent
+          opacity={0.2}
+          side={THREE.BackSide}
+        />
+      </Sphere>
+
+      {/* Inner glow layer */}
+      <Sphere args={[2.45, 32, 32]}>
+        <meshBasicMaterial
+          color="#81667A"
           transparent
           opacity={0.15}
         />
       </Sphere>
 
-      {/* Inner Core Glow */}
-      <Sphere args={[2.4, 32, 32]} scale={1}>
-        <meshBasicMaterial
-          color="#81667A"
-          transparent
-          opacity={0.3}
-        />
-      </Sphere>
-
       {/* Lighting */}
-      <ambientLight intensity={0.3} />
-      <directionalLight position={[5, 3, 5]} intensity={1} color="#D9DBBC" />
-      <pointLight position={[-5, 0, -5]} intensity={0.5} color="#5A935E" />
+      <ambientLight intensity={0.5} />
+      <directionalLight
+        position={[5, 3, 5]}
+        intensity={1.5}
+        color="#D9DBBC"
+      />
+      <pointLight
+        position={[-5, -3, -5]}
+        intensity={0.8}
+        color="#5A935E"
+      />
+      <pointLight
+        position={[0, 5, 0]}
+        intensity={0.5}
+        color="#81667A"
+      />
     </group>
   );
 };
@@ -47,9 +72,12 @@ const EarthCanvas = () => {
   return (
     <Canvas
       shadows
-      frameloop='demand'
+      frameloop='always'
       dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
+      gl={{
+        preserveDrawingBuffer: true,
+        alpha: true
+      }}
       camera={{
         fov: 45,
         near: 0.1,
@@ -60,7 +88,7 @@ const EarthCanvas = () => {
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           autoRotate
-          autoRotateSpeed={0.5}
+          autoRotateSpeed={0.8}
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}

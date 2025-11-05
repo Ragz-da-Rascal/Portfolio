@@ -12,7 +12,7 @@ const Hero = () => {
           <div className='w-5 h-5 rounded-full bg-primary' />
           <div className='w-1 sm:h-80 h-40 bg-gradient-to-b from-primary' />
         </div>
-        <div className='bg-black150 backdrop-blur-sm rounded-2xl p-6 border border-primary/20'>
+        <div className='bg-black150 backdrop-blur-sm rounded-2xl p-6 border border-primary/50'>
           <h1 className={`${styles.heroHeadText} text-white`}>Hi, I'm <span className={`text-primary`}>Jaron</span></h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I am a <span className='text-primary text-[32px]'>Full Stack </span>

@@ -19,9 +19,8 @@ import {
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
+  nyt_crossword,
+  allamerican,
   threejs,
 } from "../assets";
 
@@ -165,16 +164,16 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "contextapi",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent, // Replace with your project screenshot
-    source_code_link: "https://github.com/yourusername/react-meals",
+    image: allamerican, // Replace with your project screenshot
+    source_code_link: "https://github.com/ragz-da-rascal",
     live_link: "https://allamericaneats.vercel.app/",
   },
   {
-    name: "NYT Archived Crosswords",
+    name: "NYT Crosswords",
     description:
       "Interactive crossword puzzle application featuring random puzzle generation, Stripe payment integration, offline support, and responsive dark/light theme toggle.",
     tags: [
@@ -191,7 +190,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit, // Replace with your project screenshot
+    image: nyt_crossword, // Replace with your project screenshot
     source_code_link: "https://github.com/ragz-da-rascal/Archived-NYT-Crosswords",
     live_link: "https://ragz-da-rascal.github.io/Archived-NYT-Crosswords/",
   },

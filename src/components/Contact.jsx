@@ -24,19 +24,19 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    // Replace these with your EmailJS credentials
-    // Sign up at https://www.emailjs.com/
+    
     emailjs.send(
-      'YOUR_SERVICE_ID', // Replace with your service ID
-      'YOUR_TEMPLATE_ID', // Replace with your template ID
+      'service_gyaukrl',
+      'template_6qtdvpn',
       {
         from_name: form.name,
-        to_name: 'Jaron',
+        to_name: 'Jaron Kelly',
         from_email: form.email,
-        to_email: 'your-email@example.com', // Your email
+        to_email: 'devbookings101@gmail.com',
         message: form.message,
+        time: new Date().toLocaleString()
       },
-      'YOUR_PUBLIC_KEY' // Replace with your public key
+      '7OhGS_qeXkmTLgA3f'
     )
       .then(() => {
         setLoading(false);
@@ -45,6 +45,7 @@ const Contact = () => {
           name: '',
           email: '',
           message: '',
+          time: ''
         });
       }, (error) => {
         setLoading(false);

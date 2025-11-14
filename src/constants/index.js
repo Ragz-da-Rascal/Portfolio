@@ -11,14 +11,12 @@ import {
   redux,
   tailwind,
   nodejs,
+  elCamino,
   mongodb,
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
+  dataAnnotation,
   nyt_crossword,
   allamerican,
   threejs,
@@ -97,7 +95,7 @@ const experiences = [
   {
     title: "AI Trainer",
     company_name: "Data Annotation",
-    icon: starbucks, // Replace with your company logo
+    icon: dataAnnotation, // Replace with your company logo
     iconBg: "#383E56",
     date: "April 2024 - Present",
     points: [
@@ -110,7 +108,7 @@ const experiences = [
   {
     title: "Certificate in Computer Information Science",
     company_name: "El Camino College",
-    icon: tesla, // Replace with school logo
+    icon: elCamino, // Replace with school logo
     iconBg: "#E6DEDD",
     date: "Completed May 2023",
     points: [

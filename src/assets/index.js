@@ -22,10 +22,8 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import dataAnnotation from "./company/dataAnnotation.jpg";
+import elCamino from "./company/elCamino.jpg";
 
 import nyt_crossword from "./nyt_crossword.png";
 import allamerican from "./allamerican.png";
@@ -54,10 +52,8 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
+  dataAnnotation,
+  elCamino,
   nyt_crossword,
   allamerican,
 };

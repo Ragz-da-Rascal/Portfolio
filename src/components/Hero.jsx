@@ -7,12 +7,12 @@ import { mobileBackup } from '../assets';
 const Hero = () => {
   return (
     <section className='relative w-full h-screen mx-auto'>
-      <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
-        <div className='flex flex-col justify-center items-center mt-5'>
+      <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 mt-20`}>
+        <div className='flex flex-col justify-center items-center'>
           <div className='w-5 h-5 rounded-full bg-primary' />
           <div className='w-1 sm:h-80 h-40 bg-gradient-to-b from-primary' />
         </div>
-        <div className='bg-black-200/10 backdrop-blur-sm rounded-2xl p-6 mt-8 border border-primary/50'>
+        <div className='bg-black-200/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/50'>
           <h1 className={`${styles.heroHeadText} text-white`}>Hi, I'm <span className={`text-primary`}>Jaron</span></h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I am a <span className='text-primary text-[18px] sm:text-[24px] md:text-[32px]'>Full Stack </span>
@@ -35,7 +35,7 @@ const Hero = () => {
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary bg-primary flex justify-center items-start p-2'>
             <motion.div
               animate={{
-                y: [0, 24, 0]
+                y: [0, 25, 0]
               }}
               transition={{
                 duration: 1.5,

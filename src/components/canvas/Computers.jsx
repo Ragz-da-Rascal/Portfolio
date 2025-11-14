@@ -9,7 +9,7 @@ const Computers = () => {
   console.log(computer)
 
   return (
-    <mesh>
+    <mesh position={[0, -1, 0]}> 
       <hemisphereLight 
         intensity={0.15}
         groundColor="black"
@@ -69,6 +69,7 @@ const ComputersCanvas = () => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls 
+          enablePan={false}
           enableZoom={false}
           maxPolarAngle={Math.PI/2}
           minPolarAngle={Math.PI/2}

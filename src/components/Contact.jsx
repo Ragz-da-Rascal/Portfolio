@@ -14,6 +14,7 @@ const Contact = () => {
     message: '',
   });
   const [loading, setLoading] = useState(false);
+  const [cooldown, setCooldown] = useState(0); // NEW: Cooldown timer
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,9 +23,15 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Check if still in cooldown
+    if (cooldown > 0) {
+      alert(`Please wait ${cooldown} seconds before sending another message.`);
+      return;
+    }
+
     setLoading(true);
 
-    
     emailjs.send(
       'service_gyaukrl',
       'template_6qtdvpn',
@@ -34,6 +41,7 @@ const Contact = () => {
         from_email: form.email,
         to_email: 'devbookings101@gmail.com',
         message: form.message,
+        title: `${form.name} sent a message!`,
         time: new Date().toLocaleString()
       },
       '7OhGS_qeXkmTLgA3f'
@@ -45,8 +53,19 @@ const Contact = () => {
           name: '',
           email: '',
           message: '',
-          time: ''
         });
+
+        // Start 60 second cooldown
+        setCooldown(60);
+        const timer = setInterval(() => {
+          setCooldown((prev) => {
+            if (prev <= 1) {
+              clearInterval(timer);
+              return 0;
+            }
+            return prev - 1;
+          });
+        }, 1000);
       }, (error) => {
         setLoading(false);
         console.log(error);
@@ -109,9 +128,10 @@ const Contact = () => {
 
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl hover:bg-secondary transition-colors duration-300'
+            disabled={loading || cooldown > 0}
+            className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl hover:bg-secondary transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed'
           >
-            {loading ? 'Sending...' : 'Send'}
+            {loading ? 'Sending...' : cooldown > 0 ? `Wait ${cooldown}s` : 'Send'}
           </button>
         </form>
       </motion.div>

@@ -12,14 +12,14 @@ const Hero = () => {
           <div className='w-5 h-5 rounded-full bg-primary' />
           <div className='w-1 sm:h-80 h-40 bg-gradient-to-b from-primary' />
         </div>
-        <div className='bg-black-200/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/50'>
+        <div className='bg-black-200/10 backdrop-blur-sm rounded-2xl p-6 mt-8 border border-primary/50'>
           <h1 className={`${styles.heroHeadText} text-white`}>Hi, I'm <span className={`text-primary`}>Jaron</span></h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I am a <span className='text-primary text-[32px]'>Full Stack </span>
+            I am a <span className='text-primary text-[18px] sm:text-[24px] md:text-[32px]'>Full Stack </span>
             <br className='sm:block hidden' />
             web developer using&nbsp;
             <br className='sm:block hidden' />
-            <span className={`text-primary text-[32px]`}>React</span> as a framework.
+            <span className='text-primary text-[18px] sm:text-[24px] md:text-[32px]'>React</span> as a framework.
           </p>
 
           <div>

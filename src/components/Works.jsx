@@ -76,11 +76,10 @@ const Works = () => {
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-white text-[18px] max-w-3xl leading-[32px]'
+          className='mt-3 bg-black-200/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/50 text-white text-[18px] max-w-3xl leading-[32px]'
         >
-          Here's a selection of projects that showcase my technical abilities and problem-solving approach.
-          Each one represents real challenges I've tackled, from integrating Firebase for real-time data
-          to implementing payment systems and offline functionality. Click through to explore the live demos
+          Here's a selection of projects that showcase my technical abilities and problem-solving approaches.
+          Each one represents real challenges I've tackled, from integrating Firebase to implementing payment systems and offline functionality. Click the <span className='text-secondary'>LIVE</span> button to explore demos
           and dive into the code!
         </motion.p>
       </div>

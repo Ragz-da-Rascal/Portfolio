@@ -7,7 +7,7 @@ const Tech = () => {
     <div className='flex flex-row flex-wrap justify-center gap-10'>
       {technologies.map((technology) => (
         <div
-          className='w-28 h-28 bg-tertiary rounded-2xl flex items-center justify-center shadow-card hover:scale-105 transition-transform duration-200'
+          className='w-28 h-28 rounded-2xl flex items-center justify-center shadow-card hover:scale-105 transition-transform duration-200'
           key={technology.name}
         >
           {/* Desktop: 3D Balls */}

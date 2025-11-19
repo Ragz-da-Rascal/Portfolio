@@ -79,7 +79,7 @@ const Works = () => {
           className='mt-3 bg-black-200/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/50 text-white text-[18px] max-w-3xl leading-[32px]'
         >
           Here's a selection of projects that showcase my technical abilities and problem-solving approaches.
-          Each one represents real challenges I've tackled, from integrating Firebase to implementing payment systems and offline functionality. Click the <span className='text-secondary'>LIVE</span> button to explore demos
+          Each one represents real challenges I've tackled, from integrating Firebase to implementing payment systems and offline functionality. Click the <span className='text-secondary font-bold'>LIVE</span> button to explore demos
           and dive into the code!
         </motion.p>
       </div>

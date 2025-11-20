@@ -1,3 +1,5 @@
+import { damp } from "three/src/math/MathUtils.js";
+
 export const textVariant = (delay) => {
   return {
     hidden: {
@@ -9,8 +11,10 @@ export const textVariant = (delay) => {
       opacity: 1,
       transition: {
         type: "spring",
-        duration: 1.25,
+        duration: 0.5,
         delay: delay,
+        stiffness: 100,
+        damping: 20
       },
     },
   };

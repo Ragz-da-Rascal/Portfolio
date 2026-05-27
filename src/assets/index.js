@@ -8,6 +8,7 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 import mobileBackup from "./mobileBackup.jpg"
 
+// Technology logos
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -22,10 +23,12 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
+// Experience logos
 import dataAnnotation from "./company/dataAnnotation.jpg";
 import alignerr from "./company/alignerr.jpg";
 import elCamino from "./company/elCamino.jpg";
 
+// Projects
 import nyt_crossword from "./nyt_crossword.png";
 import allamerican from "./allamerican.png";
 

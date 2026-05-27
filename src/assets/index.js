@@ -23,6 +23,7 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
 import dataAnnotation from "./company/dataAnnotation.jpg";
+import alignerr from "./company/alignerr.jpg";
 import elCamino from "./company/elCamino.jpg";
 
 import nyt_crossword from "./nyt_crossword.png";
@@ -53,6 +54,7 @@ export {
   typescript,
   threejs,
   dataAnnotation,
+  alignerr,
   elCamino,
   nyt_crossword,
   allamerican,

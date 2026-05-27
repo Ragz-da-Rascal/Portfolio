@@ -17,6 +17,7 @@ import {
   figma,
   docker,
   dataAnnotation,
+  alignerr,
   nyt_crossword,
   allamerican,
   threejs,
@@ -93,16 +94,28 @@ const technologies = [
 
 const experiences = [
   {
-    title: "AI Trainer",
+    title: "Software Engineer",
     company_name: "Data Annotation",
     icon: dataAnnotation, // Replace with your company logo
     iconBg: "#383E56",
-    date: "April 2024 - Present",
+    date: "April 2024 - Novermber 2025",
     points: [
       "Enhanced artificial reasoning in complex applications by refining data-driven responses with a focus on Clean Code standards and performance optimization.",
       "Refined chatbot-generated responses to meet industry standards, integrating principles of UI/UX Design to improve clarity and effectiveness.",
       "Collaborated on training large language models with an emphasis on performance and accuracy.",
       "Demonstrated attention to debugging and effective analysis in fast-paced environments.",
+    ],
+  },
+  {
+    title: "Software Engineer",
+    company_name: "Alignerr",
+    icon: alignerr, // Replace with your company logo
+    iconBg: "#383E56",
+    date: "November 2025 - Present",
+    points: [
+      "Refined integration between generative models and local repositories to eliminate friction throughout the development lifecycle.",
+      "Engineered command line interface agents to transform developer navigation within complex codebases.",
+      "Accelerated the velocity of code production by optimizing the interface between human intent and machine execution.",
     ],
   },
   {

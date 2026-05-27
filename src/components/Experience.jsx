@@ -52,7 +52,7 @@ const ExperienceCard = React.memo(({ experience }) => (
       ))}
     </ul>
   </VerticalTimelineElement>
-));
+), (prevProps, nextProps) => prevProps.experience === nextProps.experience);
 
 ExperienceCard.displayName = 'ExperienceCard';
 

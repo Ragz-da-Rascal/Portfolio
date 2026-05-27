@@ -25,7 +25,7 @@ import threejs from "./tech/threejs.svg";
 
 // Experience logos
 import dataAnnotation from "./company/dataAnnotation.jpg";
-import alignerr from "./company/alignerr.jpg";
+import alignerr from "./company/Alignerr.jpg";
 import elCamino from "./company/elCamino.jpg";
 
 // Projects

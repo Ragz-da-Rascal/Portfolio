@@ -31,6 +31,7 @@ import elCamino from "./company/elCamino.jpg";
 // Projects
 import nyt_crossword from "./nyt_crossword.png";
 import allamerican from "./allamerican.png";
+import wipeify from "./wipeify.png";
 
 
 export {
@@ -61,4 +62,5 @@ export {
   elCamino,
   nyt_crossword,
   allamerican,
+  wipeify,
 };

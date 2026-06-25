@@ -19,6 +19,7 @@ import {
   dataAnnotation,
   alignerr,
   nyt_crossword,
+  wipeify,
   allamerican,
   threejs,
 } from "../assets";
@@ -162,6 +163,28 @@ const testimonials = [
 
 const projects = [
   {
+    name: "Wipeify",
+    description:
+      "Client-ready cleaning service website with responsive service pages, booking request flow, Supabase-backed booking storage, Resend customer confirmation emails, and an admin CMS for managing site content and bookings.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "resend",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: wipeify, // Replace with your Wipeify project screenshot
+    source_code_link: "https://github.com/ragz-da-rascal",
+    live_link: "https://cleaning-service-roan.vercel.app/",
+  },
+  {
     name: "All-American Eats",
     description:
       "Full-featured restaurant website with menu display, shopping cart, and order placement functionality. Integrated Firebase database for real-time updates and email notifications.",
@@ -179,7 +202,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: allamerican, // Replace with your project screenshot
+    image: allamerican,
     source_code_link: "https://github.com/ragz-da-rascal",
     live_link: "https://allamericaneats.vercel.app/",
   },
@@ -201,7 +224,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: nyt_crossword, // Replace with your project screenshot
+    image: nyt_crossword,
     source_code_link: "https://github.com/ragz-da-rascal/Archived-NYT-Crosswords",
     live_link: "https://ragz-da-rascal.github.io/Archived-NYT-Crosswords/",
   },
